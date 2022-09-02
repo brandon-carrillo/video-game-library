@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+<!--    <color name="purple_500">#FF6200EE</color>-->
+<!--    <color name="purple_700">#FF3700B3</color>-->
+<!--    <color name="teal_200">#FF03DAC5</color>-->
+<!--    <color name="teal_700">#FF018786</color>-->
+
+
+    <!-- primary color -->
+    <color name="blue_900">#1f4c9e</color>
+    <color name="blue_800">#286abd</color>
+    <color name="blue_700">#2d7bcf</color>
+    <color name="blue_600">#348de2</color>
+    <color name="blue_500">#3a9bf0</color>
+    <color name="blue_400">#51a9f2</color>
+    <color name="blue_300">#6eb9f4</color>
+    <color name="blue_200">#95cdf8</color>
+    <color name="blue_100">#bee0fa</color>
+
+
+    <!-- complementary color -->
+    <color name="orange_900">#d45e30</color>
+    <color name="orange_800">#e17333</color>
+    <color name="orange_700">#e98036</color>
+    <color name="orange_600">#f08f3a</color>
+    <color name="orange_500">#f59a3d</color>
+    <color name="orange_400">#f7a74b</color>
+    <color name="orange_300">#f9b765</color>
+    <color name="orange_200">#fbcb8e</color>
+    <color name="orange_100">#fce0ba</color>
+
+
+    <!-- reds -->
+    <color name="red_300">#E57373</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_700">#D32F2F</color>
+
+    <!-- black and white -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

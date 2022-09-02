@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="homeListWidth">230dp</dimen>
+    <integer name="gameListColumns">1</integer>
+    <dimen name="gameThumbnailWidth">100dp</dimen>
+    <dimen name="gameThumbnailHeight">205dp</dimen>
+    <dimen name="picassoGameThumbnailWidth">110dp</dimen>
+    <dimen name="picassoGameThumbnailHeight">195dp</dimen>
+    <dimen name="listPlatformIconSize">18dp</dimen>
+    <dimen name="gameBannerWidth">400dp</dimen>
+    <dimen name="gameBannerHeight">200dp</dimen>
+    <dimen name="gameScreenshotWidth">300dp</dimen>
+    <dimen name="gameScreenshotHeight">150dp</dimen>
+    <dimen name="profilePhotoSize">100dp</dimen>
+</resources>

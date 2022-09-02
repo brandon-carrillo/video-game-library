@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_gameProfile_image"
+            android:layout_width="@dimen/gameThumbnailWidth"
+            android:layout_height="@dimen/gameThumbnailHeight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_broken_image"
+            android:contentDescription="@string/gameImageDescription" />
+
+        <TextView
+            android:id="@+id/item_gameProfile_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_gameProfile_image"
+            app:layout_constraintTop_toTopOf="@+id/item_gameProfile_image"
+            tools:text="Game Title" />
+
+        <TextView
+            android:id="@+id/item_gameProfile_developer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_gameProfile_image"
+            app:layout_constraintTop_toBottomOf="@+id/item_gameProfile_name"
+            tools:text="Game Developer" />
+
+        <ImageView
+            android:id="@+id/item_game_platform1"
+            android:layout_width="@dimen/listPlatformIconSize"
+            android:layout_height="@dimen/listPlatformIconSize"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/playStation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/item_game_library"
+            app:layout_constraintTop_toBottomOf="@+id/item_game_library"
+            tools:srcCompat="@drawable/ic_downloading" />
+
+        <ImageView
+            android:id="@+id/item_game_platform2"
+            android:layout_width="@dimen/listPlatformIconSize"
+            android:layout_height="@dimen/listPlatformIconSize"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_game_platform1"
+            app:layout_constraintStart_toEndOf="@+id/item_game_platform1"
+            app:layout_constraintTop_toTopOf="@+id/item_game_platform1"
+            tools:srcCompat="@drawable/ic_downloading"
+            android:contentDescription="@string/xbox" />
+
+        <ImageView
+            android:id="@+id/item_game_platform3"
+            android:layout_width="@dimen/listPlatformIconSize"
+            android:layout_height="@dimen/listPlatformIconSize"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_game_platform2"
+            app:layout_constraintStart_toEndOf="@+id/item_game_platform2"
+            app:layout_constraintTop_toTopOf="@+id/item_game_platform2"
+            tools:srcCompat="@drawable/ic_downloading"
+            android:contentDescription="@string/windows" />
+
+        <ImageView
+            android:id="@+id/item_game_platform4"
+            android:layout_width="@dimen/listPlatformIconSize"
+            android:layout_height="@dimen/listPlatformIconSize"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_game_platform3"
+            app:layout_constraintStart_toEndOf="@+id/item_game_platform3"
+            app:layout_constraintTop_toTopOf="@+id/item_game_platform3"
+            tools:srcCompat="@drawable/ic_downloading"
+            android:contentDescription="@string/nSwitch" />
+
+        <ImageButton
+            android:id="@+id/item_game_library"
+            android:layout_width="@dimen/libraryButtonSize"
+            android:layout_height="@dimen/libraryButtonSize"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/addToLibrary"
+            android:theme="@style/WidgetOverlay.Secondary"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toStartOf="@+id/item_game_wishlist"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_gameProfile_image"
+            app:layout_constraintTop_toBottomOf="@+id/item_gameProfile_developer"
+            app:srcCompat="@drawable/ic_library_solid" />
+
+        <ImageButton
+            android:id="@+id/item_game_wishlist"
+            android:layout_width="@dimen/wishlistButtonSize"
+            android:layout_height="@dimen/wishlistButtonSize"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/addToWishlist"
+            android:theme="@style/WidgetOverlay.Secondary"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_game_library"
+            app:layout_constraintTop_toBottomOf="@+id/item_gameProfile_developer"
+            app:srcCompat="@drawable/ic_wishlist_solid" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

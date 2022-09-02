@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.ranken.brandon_carrillo.game_library">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GameLibrary">
+        <activity
+            android:name=".EbayBrowseActivity"
+            android:exported="false"
+            android:label="@string/ebayListings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.ranken.brandon_carrillo.game_library.GameDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="true"
+            android:label="@string/userProfile"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.ranken.brandon_carrillo.game_library.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="my-game-list.com" />
+                <data android:pathPrefix="/user" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="@string/home" />
+        <activity
+            android:name=".GameListActivity"
+            android:exported="true"
+            android:label="@string/gameList"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.ranken.brandon_carrillo.game_library.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".MyProfileActivity"
+            android:exported="true"
+            android:label="@string/myProfile"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.ranken.brandon_carrillo.game_library.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".GameDetailsActivity"
+            android:exported="true"
+            android:label="@string/gameDetails"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.ranken.brandon_carrillo.game_library.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="my-game-list.com" />
+                <data android:pathPrefix="/game" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ComposeReviewActivity"
+            android:exported="false"
+            android:label="@string/composeReview"
+            android:parentActivityName=".GameDetailsActivity"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.ranken.brandon_carrillo.game_library.GameDetailsActivity" />
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="edu.ranken.brandon_carrillo.game_library.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

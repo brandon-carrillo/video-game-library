@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profileGameIcon"
+            android:layout_width="@dimen/gameIconSize"
+            android:layout_height="@dimen/gameIconSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_broken_image"
+            android:contentDescription="@string/gameIcon" />
+
+        <TextView
+            android:id="@+id/profileGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/profileGameIcon"
+            app:layout_constraintTop_toTopOf="@+id/profileGameIcon"
+            tools:text="Game Title" />
+
+        <TextView
+            android:id="@+id/profileGameDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/profileGameIcon"
+            app:layout_constraintTop_toBottomOf="@+id/profileGameName"
+            tools:text="Game Developer" />
+
+        <ImageView
+            android:id="@+id/profileGamePlatform1"
+            android:layout_width="@dimen/profileListPlatformIconSize"
+            android:layout_height="@dimen/profileListPlatformIconSize"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/profileGameDeveloper"
+            app:layout_constraintTop_toBottomOf="@+id/profileGameDeveloper"
+            app:srcCompat="@drawable/ic_downloading"
+            android:contentDescription="@string/playStation" />
+
+        <ImageView
+            android:id="@+id/profileGamePlatform2"
+            android:layout_width="@dimen/profileListPlatformIconSize"
+            android:layout_height="@dimen/profileListPlatformIconSize"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profileGamePlatform1"
+            app:layout_constraintStart_toEndOf="@+id/profileGamePlatform1"
+            app:layout_constraintTop_toTopOf="@+id/profileGamePlatform1"
+            app:srcCompat="@drawable/ic_downloading"
+            android:contentDescription="@string/xbox" />
+
+        <ImageView
+            android:id="@+id/profileGamePlatform3"
+            android:layout_width="@dimen/profileListPlatformIconSize"
+            android:layout_height="@dimen/profileListPlatformIconSize"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profileGamePlatform2"
+            app:layout_constraintStart_toEndOf="@+id/profileGamePlatform2"
+            app:layout_constraintTop_toTopOf="@+id/profileGamePlatform2"
+            app:srcCompat="@drawable/ic_downloading"
+            android:contentDescription="@string/windows" />
+
+        <ImageView
+        android:id="@+id/profileGamePlatform4"
+            android:layout_width="@dimen/profileListPlatformIconSize"
+            android:layout_height="@dimen/profileListPlatformIconSize"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profileGamePlatform3"
+        app:layout_constraintStart_toEndOf="@+id/profileGamePlatform3"
+        app:layout_constraintTop_toTopOf="@+id/profileGamePlatform3"
+        app:srcCompat="@drawable/ic_downloading"
+            android:contentDescription="@string/nSwitch" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

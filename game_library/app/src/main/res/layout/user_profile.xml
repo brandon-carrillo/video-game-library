@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileActivity">
+
+    <TextView
+        android:id="@+id/userProfileErrorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User Profile Error Text" />
+
+    <ImageView
+        android:id="@+id/userProfilePhoto"
+        android:layout_width="@dimen/profilePhotoSize"
+        android:layout_height="@dimen/profilePhotoSize"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/userProfilePhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileErrorText"
+        app:srcCompat="@drawable/ic_broken_image" />
+
+    <TextView
+        android:id="@+id/userIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/userId"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userProfilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/userNameText" />
+
+    <TextView
+        android:id="@+id/userIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/userIdLabel"
+        app:layout_constraintStart_toStartOf="@+id/userIdLabel"
+        app:layout_constraintTop_toBottomOf="@+id/userIdLabel"
+        tools:text="User ID" />
+
+    <TextView
+        android:id="@+id/userNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/name"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userProfilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileErrorText" />
+
+    <TextView
+        android:id="@+id/userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userProfilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/userNameLabel"
+        tools:text="User Name" />
+
+    <TextView
+        android:id="@+id/userPlatformsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/platforms"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toEndOf="@+id/userProfilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/userIdText" />
+
+    <ImageView
+        android:id="@+id/userPlatform1"
+        android:layout_width="@dimen/profilePlatformIconSize"
+        android:layout_height="@dimen/profilePlatformIconSize"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/playStation"
+        app:layout_constraintEnd_toStartOf="@+id/userPlatform2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userProfilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/userPlatformsLabel"
+        app:srcCompat="@drawable/ic_downloading" />
+
+    <ImageView
+        android:id="@+id/userPlatform2"
+        android:layout_width="@dimen/profilePlatformIconSize"
+        android:layout_height="@dimen/profilePlatformIconSize"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/xbox"
+        app:layout_constraintEnd_toStartOf="@+id/userPlatform3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userPlatform1"
+        app:layout_constraintTop_toBottomOf="@+id/userPlatformsLabel"
+        app:srcCompat="@drawable/ic_downloading" />
+
+    <ImageView
+        android:id="@+id/userPlatform3"
+        android:layout_width="@dimen/profilePlatformIconSize"
+        android:layout_height="@dimen/profilePlatformIconSize"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/windows"
+        app:layout_constraintEnd_toStartOf="@+id/userPlatform4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userPlatform2"
+        app:layout_constraintTop_toBottomOf="@+id/userPlatformsLabel"
+        app:srcCompat="@drawable/ic_downloading" />
+
+    <ImageView
+        android:id="@+id/userPlatform4"
+        android:layout_width="@dimen/profilePlatformIconSize"
+        android:layout_height="@dimen/profilePlatformIconSize"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/nSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userPlatform3"
+        app:layout_constraintTop_toBottomOf="@+id/userPlatformsLabel"
+        app:srcCompat="@drawable/ic_downloading" />
+
+    <TextView
+        android:id="@+id/userLastLoginLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lastLogin"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/userLastLoginText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPlatform1" />
+
+    <TextView
+        android:id="@+id/userLastLoginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userLastLoginLabel"
+        app:layout_constraintTop_toBottomOf="@+id/userPlatform2"
+        tools:text="Last Login" />
+
+    <TextView
+        android:id="@+id/userLibraryLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/library"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLastLoginLabel" />
+
+    <TextView
+        android:id="@+id/userLibraryErrorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLibraryLabel"
+        tools:text="User Library Error" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userLibrary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLibraryErrorText" />
+
+    <TextView
+        android:id="@+id/userWishlistLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/wishlist"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLibrary" />
+
+    <TextView
+        android:id="@+id/userWishlistErrorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userWishlistLabel"
+        tools:text="User Wishlist Error" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userWishlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userWishlistErrorText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameDetailsActivity"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/gameErrorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Game Error Text" />
+
+    <ImageView
+        android:id="@+id/gameBanner"
+        android:layout_width="@dimen/gameBannerWidth"
+        android:layout_height="@dimen/gameBannerHeight"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/gameBannerDescription"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/gameErrorText"
+        app:layout_constraintStart_toStartOf="@+id/gameErrorText"
+        app:layout_constraintTop_toBottomOf="@+id/gameErrorText"
+        app:srcCompat="@drawable/ic_broken_image" />
+
+    <TextView
+        android:id="@+id/gameTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameBanner"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/gameDescriptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameTitleText"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada leo id massa blandit, sed interdum dolor tempus. Aliquam pellentesque ex justo, sit amet fermentum metus facilisis lacinia. Vivamus in dapibus tellus. Sed accumsan justo ac tristique porttitor.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada leo id massa blandit, sed interdum dolor tempus. Aliquam pellentesque ex justo, sit amet fermentum metus facilisis lacinia. Vivamus in dapibus tellus. Sed accumsan justo ac tristique porttitor.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada leo id massa blandit, sed interdum dolor tempus. Aliquam pellentesque ex justo, sit amet fermentum metus facilisis lacinia. Vivamus in dapibus tellus. Sed accumsan justo ac tristique porttitor." />
+
+    <TextView
+        android:id="@+id/controllerSupportLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/controllerSupport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameDescriptionText" />
+
+    <TextView
+        android:id="@+id/controllerSupportText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/controllerSupportLabel"
+        app:layout_constraintTop_toBottomOf="@+id/gameDescriptionText"
+        tools:text="Full Support" />
+
+    <TextView
+        android:id="@+id/multiplayerSupportLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/multiplayerSupport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/controllerSupportLabel" />
+
+    <TextView
+        android:id="@+id/multiplayerSupportText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/multiplayerSupportLabel"
+        app:layout_constraintTop_toBottomOf="@+id/controllerSupportText"
+        tools:text="Offline Only" />
+
+    <TextView
+        android:id="@+id/genreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/genre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplayerSupportLabel" />
+
+    <TextView
+        android:id="@+id/genreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/genreLabel"
+        app:layout_constraintTop_toBottomOf="@+id/multiplayerSupportText"
+        tools:text="RPG, Action, Adventure" />
+
+    <TextView
+        android:id="@+id/tagsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genreLabel"
+        tools:text="#Fast, #Action, #Fun, #HighFlying" />
+
+    <ImageView
+        android:id="@+id/gamePlatform1"
+        android:layout_width="@dimen/detailsPlatformIconSize"
+        android:layout_height="@dimen/detailsPlatformIconSize"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/playStation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tagsText"
+        app:srcCompat="@drawable/ic_downloading" />
+
+    <ImageView
+        android:id="@+id/gamePlatform2"
+        android:layout_width="@dimen/detailsPlatformIconSize"
+        android:layout_height="@dimen/detailsPlatformIconSize"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gamePlatform1"
+        app:layout_constraintStart_toEndOf="@+id/gamePlatform1"
+        app:layout_constraintTop_toTopOf="@+id/gamePlatform1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_downloading"
+        android:contentDescription="@string/xbox" />
+
+    <ImageView
+        android:id="@+id/gamePlatform3"
+        android:layout_width="@dimen/detailsPlatformIconSize"
+        android:layout_height="@dimen/detailsPlatformIconSize"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gamePlatform2"
+        app:layout_constraintStart_toEndOf="@+id/gamePlatform2"
+        app:layout_constraintTop_toTopOf="@+id/gamePlatform2"
+        app:srcCompat="@drawable/ic_downloading"
+        android:contentDescription="@string/windows" />
+
+    <ImageView
+        android:id="@+id/gamePlatform4"
+        android:layout_width="@dimen/detailsPlatformIconSize"
+        android:layout_height="@dimen/detailsPlatformIconSize"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gamePlatform3"
+        app:layout_constraintStart_toEndOf="@+id/gamePlatform3"
+        app:layout_constraintTop_toTopOf="@+id/gamePlatform3"
+        app:srcCompat="@drawable/ic_downloading"
+        android:contentDescription="@string/nSwitch" />
+
+    <Button
+        android:id="@+id/ebayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/findOnEbay"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/orange_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamePlatform1" />
+
+    <TextView
+        android:id="@+id/ebayAvgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ebayButton"
+        app:layout_constraintStart_toEndOf="@+id/ebayButton"
+        app:layout_constraintTop_toTopOf="@+id/ebayButton"
+        tools:text="Average price:" />
+
+    <ImageView
+        android:id="@+id/gameScreenshot1"
+        android:layout_width="@dimen/gameScreenshotWidth"
+        android:layout_height="@dimen/gameScreenshotHeight"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/screenshot_1"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ebayButton"
+        app:srcCompat="@drawable/ic_broken_image" />
+
+    <ImageView
+        android:id="@+id/gameScreenshot2"
+        android:layout_width="@dimen/gameScreenshotWidth"
+        android:layout_height="@dimen/gameScreenshotHeight"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/screenshot_2"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameScreenshot1"
+        app:srcCompat="@drawable/ic_broken_image" />
+
+    <ImageView
+        android:id="@+id/gameScreenshot3"
+        android:layout_width="@dimen/gameScreenshotWidth"
+        android:layout_height="@dimen/gameScreenshotHeight"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/screenshot_3"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameScreenshot2"
+        app:srcCompat="@drawable/ic_broken_image" />
+
+    <TextView
+        android:id="@+id/gameReviewsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/reviews"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameScreenshot3" />
+
+    <TextView
+        android:id="@+id/gameReviewsErrorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameReviewsLabel"
+        tools:text="Game Reviews Error Text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameReviewsErrorText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

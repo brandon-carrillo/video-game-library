@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/playstationButton"
+        android:layout_width="@dimen/chooserButtonSize"
+        android:layout_height="@dimen/chooserButtonSize"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/xboxButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_playstation_outline"
+        android:contentDescription="@string/playStation" />
+
+    <ImageButton
+        android:id="@+id/xboxButton"
+        android:layout_width="@dimen/chooserButtonSize"
+        android:layout_height="@dimen/chooserButtonSize"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/windowsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/playstationButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_xbox_outline"
+        android:contentDescription="@string/xbox" />
+
+    <ImageButton
+        android:id="@+id/windowsButton"
+        android:layout_width="@dimen/chooserButtonSize"
+        android:layout_height="@dimen/chooserButtonSize"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switchButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/xboxButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_windows_outline"
+        android:contentDescription="@string/windows" />
+
+    <ImageButton
+        android:id="@+id/switchButton"
+        android:layout_width="@dimen/chooserButtonSize"
+        android:layout_height="@dimen/chooserButtonSize"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/windowsButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_switch_outline"
+        android:contentDescription="@string/nSwitch" />
+</androidx.constraintlayout.widget.ConstraintLayout>

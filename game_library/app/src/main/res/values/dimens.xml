@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gameThumbnailWidth">158dp</dimen>
+    <dimen name="gameThumbnailHeight">280dp</dimen>
+    <dimen name="picassoGameThumbnailWidth">316dp</dimen>
+    <dimen name="picassoGameThumbnailHeight">560dp</dimen>
+    <dimen name="libraryButtonSize">50dp</dimen>
+    <dimen name="profileListPlatformIconSize">23dp</dimen>
+    <dimen name="wishlistButtonSize">50dp</dimen>
+    <dimen name="profilePhotoSize">125dp</dimen>
+    <dimen name="profilePlatformIconSize">28dp</dimen>
+    <dimen name="detailsPlatformIconSize">30dp</dimen>
+    <dimen name="userIconSize">50dp</dimen>
+    <dimen name="ebayItemThumbnailSize">102dp</dimen>
+    <dimen name="gameIconSize">110dp</dimen>
+    <dimen name="chooserButtonSize">50dp</dimen>
+    <dimen name="gameBannerWidth">400dp</dimen>
+    <dimen name="gameBannerHeight">200dp</dimen>
+    <dimen name="gameScreenshotWidth">400dp</dimen>
+    <dimen name="gameScreenshotHeight">200dp</dimen>
+    <dimen name="listPlatformIconSize">28dp</dimen>
+    <dimen name="camberaButtonSize">50dp</dimen>
+    <dimen name="galleryButtonSize">50dp</dimen>
+    <dimen name="homeListWidth">300dp</dimen>
+    <integer name="gameListColumns">1</integer>
+</resources>
